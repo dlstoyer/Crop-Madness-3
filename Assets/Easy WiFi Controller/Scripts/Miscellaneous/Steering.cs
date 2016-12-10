@@ -27,28 +27,8 @@ public class Steering : MonoBehaviour {
         floatBackchannel.setValue(myRigidbody.velocity.magnitude);
     }
 
-    //human example scene methods (gaspedal, brakepedal, and steerball)
-    public void gasPedal(ButtonControllerType gasButton)
-    {
-        if (gasButton.BUTTON_STATE_IS_PRESSED)
-        {
-            if (myRigidbody.velocity.magnitude > 1f)
-                myRigidbody.AddForce(myRigidbody.velocity * sensitivity * .5f);
-            else
-                myRigidbody.AddForce((this.transform.position - Camera.main.transform.position) * sensitivity * 5f);
-        }
-    }
+    //human example scene methods (steerball)
 
-    public void brakePedal (ButtonControllerType brakeButton)
-    {
-        if (brakeButton.BUTTON_STATE_IS_PRESSED)
-        {
-            if (myRigidbody.velocity.magnitude > 1f)
-                myRigidbody.AddForce(myRigidbody.velocity * -myRigidbody.velocity.magnitude);                
-            else
-                myRigidbody.AddForce(myRigidbody.velocity * -myRigidbody.velocity.magnitude * 10f); 
-        }
-    }
 
     public void steerBall(AccelerometerControllerType accelerometer)
     {
