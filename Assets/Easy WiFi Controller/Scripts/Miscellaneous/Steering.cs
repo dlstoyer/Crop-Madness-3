@@ -13,7 +13,7 @@ public class Steering : MonoBehaviour {
     Vector3 accel;
     float horizontal, vertical;
     float normalizeDegrees = 90f;
-    float sensitivity = 5f;
+    float sensitivity = 40f;
     Vector3 actionVectorPosition;
     Vector3 computerVector;
 

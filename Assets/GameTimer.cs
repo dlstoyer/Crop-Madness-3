@@ -26,6 +26,7 @@ public class GameTimer : MonoBehaviour {
     {
         finished = true;
         TimerText.color = Color.yellow;
+        
     }
 
 }
