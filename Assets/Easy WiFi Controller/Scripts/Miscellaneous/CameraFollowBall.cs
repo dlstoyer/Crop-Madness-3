@@ -19,6 +19,7 @@ public class CameraFollowBall : MonoBehaviour {
 	void Update () {
 	    newPosition = objectTransform.position;
         newPosition.z -= 5f;
+        newPosition.y += 5f;
 
         this.transform.position = newPosition;
 	}
